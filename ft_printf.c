@@ -21,9 +21,21 @@ int	ft_printf(const char *format, ...)
 	count = 0;
 	while (format[i])
 	{
-		write(1, &format[i], 1);
-		count++;
-		i++;
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '%')
+			{
+				write(1, &format[i + 1], 1);
+				count++;
+			}
+			i += 2;
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			count++;
+			i++;
+		}
 	}
 	return (count);
 }
