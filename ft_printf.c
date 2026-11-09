@@ -12,30 +12,39 @@
 
 #include "ft_printf.h"
 
+int	ft_format(va_list *args, char spec)
+{
+	if (spec == '%')
+		return (ft_putchar('%'));
+	if (spec == 'c')
+		return (ft_putchar(va_arg(*args, int)));
+	return (0);
+}
+
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
+	va_list	args;
 
 	i = 0;
 	count = 0;
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
-			{
-				write(1, &format[i + 1], 1);
-				count++;
-			}
+			if (format[i + 1] == '\0')
+				break ;
+			count += ft_format(&args, format[i + 1]);
 			i += 2;
 		}
 		else
 		{
-			write(1, &format[i], 1);
-			count++;
+			count += ft_putchar(format[i]);
 			i++;
 		}
 	}
+	va_end(args);
 	return (count);
 }
