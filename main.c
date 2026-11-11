@@ -2,14 +2,12 @@
 
 int main(void)
 {
-    int	a;
-	int	b;
+    int a;
 
-	a = ft_printf("%s|%c|%%\n", "hello", 'x');
-	b = printf("%s|%c|%%\n", "hello", 'x');
-	printf("mine: %d, real: %d\n", a, b);
-	a = ft_printf("[%s]\n", "");
-	b = printf("[%s]\n", "");
-	printf("mine: %d, real: %d\n", a, b);
+    a = -345;
+
+    printf("original: %d\n", a);
+    ft_printf("ft_print: %d\n", a);
+
 	return (0);
 }

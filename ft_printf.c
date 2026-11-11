@@ -20,6 +20,9 @@ int	ft_format(va_list *args, char spec)
 		return (ft_putchar(va_arg(*args, int)));
 	if (spec == 's')
 		return (ft_putstr(va_arg(*args, char *)));
+	if (spec == 'd' || spec == 'i')
+		return (ft_putnbr(va_arg(*args, int)));
+	
 	return (0);
 }
 

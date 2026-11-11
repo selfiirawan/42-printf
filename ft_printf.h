@@ -16,10 +16,12 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
 
 int	ft_printf(const char *, ...);
 int ft_putchar(char c);
 int ft_format(va_list *args, char spec);
 int ft_putstr(char *s);
+int ft_putnbr(int n);
 
 #endif
