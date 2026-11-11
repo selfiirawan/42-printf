@@ -22,6 +22,8 @@ int	ft_format(va_list *args, char spec)
 		return (ft_putstr(va_arg(*args, char *)));
 	if (spec == 'd' || spec == 'i')
 		return (ft_putnbr(va_arg(*args, int)));
+	if (spec == 'u')
+		return (ft_putunbr(va_arg(*args, unsigned int)));
 	
 	return (0);
 }

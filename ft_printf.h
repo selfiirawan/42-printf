@@ -23,5 +23,6 @@ int ft_putchar(char c);
 int ft_format(va_list *args, char spec);
 int ft_putstr(char *s);
 int ft_putnbr(int n);
+int ft_putunbr(unsigned int n);
 
 #endif
