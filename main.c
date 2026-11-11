@@ -2,14 +2,14 @@
 
 int main(void)
 {
-    // int num;
+    int	a;
+	int	b;
 
-    // ft_printf("hello\n");
-
-    ft_printf("%c %c %c\n", 'a', 'b', 'c');
-
-    // num = ft_printf("100%%");
-    // printf("\nreturned: %d\n", num);
-
-    return (0);
+	a = ft_printf("%s|%c|%%\n", "hello", 'x');
+	b = printf("%s|%c|%%\n", "hello", 'x');
+	printf("mine: %d, real: %d\n", a, b);
+	a = ft_printf("[%s]\n", "");
+	b = printf("[%s]\n", "");
+	printf("mine: %d, real: %d\n", a, b);
+	return (0);
 }

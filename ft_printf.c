@@ -18,6 +18,8 @@ int	ft_format(va_list *args, char spec)
 		return (ft_putchar('%'));
 	if (spec == 'c')
 		return (ft_putchar(va_arg(*args, int)));
+	if (spec == 's')
+		return (ft_putstr(va_arg(*args, char *)));
 	return (0);
 }
 

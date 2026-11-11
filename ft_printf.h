@@ -20,5 +20,6 @@
 int	ft_printf(const char *, ...);
 int ft_putchar(char c);
 int ft_format(va_list *args, char spec);
+int ft_putstr(char *s);
 
 #endif
