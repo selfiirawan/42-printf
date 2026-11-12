@@ -28,7 +28,8 @@ int	ft_format(va_list *args, char spec)
 		return (ft_puthex(va_arg(*args, unsigned int), "0123456789abcdef"));
 	if (spec == 'X')
 		return (ft_puthex(va_arg(*args, unsigned int), "0123456789ABCDEF"));
-	
+	if (spec == 'p')
+		return (ft_putptr(va_arg(*args, void *)));
 	return (0);
 }
 

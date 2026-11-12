@@ -2,8 +2,11 @@
 
 int main(void)
 {
-    ft_printf("ft_printf: %x and %X\n", 500, 500);
-    printf("ft_printf: %x and %X\n", 500, 500);
+    int	x;
+
+    x = 5;
+    ft_printf("%p|%p\n", &x, NULL);
+    printf("%p|%p\n", &x, NULL);
 
 	return (0);
 }
